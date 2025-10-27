@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>M3 - Progetto di fine modulo</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="container-fluid">
+            <div class="row">
+                <div
+                    class="col top-row-nav d-flex justify-content-between align-items-center px-5"
+                >
+                    <!-- Left Side -->
+                    <div
+                        class="d-flex justify-content-center align-items-center ps-lg-5"
+                    >
+                        <a href="#" class="pe-4 pe-lg-5 nav-logo">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+                                alt="netflix logo"
+                                class="img-fluid"
+                            />
+                        </a>
+                        <!-- Item List Big Screens -->
+                        <ul
+                            class="nav-list-desktop list-unstyled d-none d-lg-flex align-items-center gap-4 mb-0"
+                        >
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium"
+                                    href="#"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium text-white active-link"
+                                    href="#"
+                                    >TV Shows</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium"
+                                    href="#"
+                                    >Movies</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium"
+                                    href="#"
+                                    >New &amp; Popular</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium"
+                                    href="./my-list.html"
+                                    >My List</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-decoration-none fw-medium"
+                                    href="#"
+                                    >Browse by Languages</a
+                                >
+                            </li>
+                        </ul>
+                        <!-- Dropdown Small Screens -->
+                        <div
+                            class="nav-list-small-screen position-relative d-flex align-items-center d-lg-none"
+                        >
+                            <a
+                                class="dropdown-toggle text-white text-decoration-none"
+                                href="#"
+                            >
+                                Browse
+                            </a>
+                            <ul
+                                class="nav-small-screen-menu position-absolute list-unstyled"
+                            >
+                                <ion-icon
+                                    class="position-absolute"
+                                    name="triangle"
+                                ></ion-icon>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center"
+                                        href="#"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center active-link"
+                                        href="#"
+                                        >TV Shows</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center"
+                                        href="#"
+                                        >Movies</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center"
+                                        href="#"
+                                        >New &amp; Popular</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center"
+                                        href="#"
+                                        >My List</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item fw-medium text-center"
+                                        href="#"
+                                        >Browse by Languages</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div
+                        class="nav-right-side-items d-flex align-items-center gap-4 pe-lg-5"
+                    >
+                        <div class="search-bar d-flex px-2 align-items-center">
+                            <ion-icon
+                                class="search-icon text-white"
+                                name="search-outline"
+                            ></ion-icon>
+                            <input
+                                class="text-white fw-medium visually-hidden"
+                                type="search"
+                                placeholder="Titles, people, genres"
+                            />
+                        </div>
+                        <a
+                            href="#"
+                            class="d-none d-lg-block text-white fw-medium text-decoration-none"
+                            >Kids</a
+                        >
+                        <div
+                            class="notification-bell position-relative d-flex align-items-center"
+                        >
+                            <ion-icon
+                                class="text-white"
+                                name="notifications-outline"
+                            ></ion-icon>
+                            <div
+                                class="menu notification-menu position-absolute d-flex gap-4"
+                            >
+                                <ion-icon
+                                    class="position-absolute"
+                                    name="triangle"
+                                ></ion-icon>
+                                <img
+                                    src="https://assets.nflxext.com/us/email/gem/comingsoon/csInapp_112x63.png"
+                                    alt="coming-soon"
+                                    class="img-fluid rounded"
+                                />
+                                <div>
+                                    <h3 class="mb-0">Netflix Lookahead</h3>
+                                    <h3 class="mb-1">
+                                        Explore what's coming soon.
+                                    </h3>
+                                    <p class="mb-0 text-secondary">
+                                        1 month ago
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="user-profile position-relative d-flex align-items-center gap-3"
+                        >
+                            <img
+                                src="https://occ-0-6212-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTly2Y8Quti88LqDPgtK_-mgv-oVXtHcxiwsF51w0b2z7mZ7RcRhJMfDNUUk-iC7c4vA6SU0sc2SxsJTIVnpJ8p_OSUeuew.png?r=a45"
+                                alt="user picture"
+                                class="img-fluid rounded user-profile"
+                            />
+                            <div
+                                class="menu profile-menu position-absolute d-flex flex-column gap-4"
+                            >
+                                <ion-icon
+                                    class="position-absolute"
+                                    name="triangle"
+                                ></ion-icon>
+                                <div
+                                    class="profiles-container d-flex flex-column gap-3 ps-3"
+                                >
+                                    <div
+                                        class="profile d-flex gap-3 align-items-center"
+                                    >
+                                        <img
+                                            src="https://occ-0-6212-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABWHwk9T_pV0xwh3qNnsqDHzMMwdoVXMlbNmSTmbon3-Pf3JVUOAWzIbk8EpYNsSkZ7kFHSZRw-0WLJAPcrvWDUiIIivqBtE.png?r=ab6"
+                                            alt="profile picture"
+                                            class="img-fluid rounded"
+                                        />
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Matteo</a
+                                        >
+                                        <ion-icon
+                                            class="lock-icon fs-5 text-white ps-5"
+                                            name="lock-closed-outline"
+                                        ></ion-icon>
+                                    </div>
+                                    <div
+                                        class="profile d-flex gap-3 align-items-center"
+                                    >
+                                        <img
+                                            src="https://occ-0-6212-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABYnjO0sg61Sr_6qSjEi2ATW5p8us77XmsAUN12O16X8N8aBK6m2x344-l17V34zrjHcag5Ts9buGE4q2sGTwP68iTIjHRvE.png?r=236"
+                                            alt="profile picture"
+                                            class="img-fluid rounded"
+                                        />
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Marti</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="profile d-flex gap-3 align-items-center"
+                                    >
+                                        <img
+                                            src="https://occ-0-6212-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABeukSeWjyiUEgKzcXwSdeS8ul5WNIOTMt6QsgVlobiBA8SKShw4Mfb2QdD6R_i0TZZ3fr4409fGv4q1kXrmpUSIevJDc90M.png?r=ec4"
+                                            alt="profile picture"
+                                            class="img-fluid rounded"
+                                        />
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Kids</a
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="profile-settings d-flex flex-column gap-1 ps-3"
+                                >
+                                    <div
+                                        class="d-flex align-items-center gap-3"
+                                    >
+                                        <div class="settings-icon">
+                                            <ion-icon
+                                                class="text-white"
+                                                name="brush-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Manage Profiles</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center gap-3"
+                                    >
+                                        <div class="settings-icon">
+                                            <ion-icon
+                                                class="text-white"
+                                                name="exit-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Exit Profiles</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center gap-3"
+                                    >
+                                        <div class="settings-icon">
+                                            <ion-icon
+                                                class="text-white"
+                                                name="car-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Transfer Profiles</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center gap-3"
+                                    >
+                                        <div class="settings-icon">
+                                            <ion-icon
+                                                class="text-white"
+                                                name="person-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Account</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center gap-3"
+                                    >
+                                        <div class="settings-icon">
+                                            <ion-icon
+                                                class="text-white"
+                                                name="help-circle-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="text-white text-decoration-none"
+                                            >Help Center</a
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-center align-items-center border-top border-secondary py-4"
+                                >
+                                    <a
+                                        href="#"
+                                        class="text-white text-decoration-none"
+                                        >Sign out of Netflix</a
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="profile-menu-arrow d-flex align-items-center"
+                            >
+                                <ion-icon
+                                    class="text-white"
+                                    name="caret-down-outline"
+                                ></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div
+                    class="col bottom-row-nav d-flex justify-content-between align-items-center px-5"
+                >
+                    <div class="d-flex align-items-center gap-5 ps-lg-5">
+                        <h1 class="text-white fw-bolder">TV Shows</h1>
+                        <div class="dropdown">
+                            <button
+                                class="dropdown-toggle btn genres-button text-white fw-bolder border-white rounded-0 py-1 px-4"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Genres
+                            </button>
+                            <ul
+                                class="dropdown-menu genres-menu visually-hidden"
+                            >
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Anime</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >British</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Comedies</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Crime</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Docuseries</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Drama</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >European</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Horror</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >International</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Italian</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Kids</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Mysteries</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Reality &amp; Talk</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Romance</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Sci-Fi &amp; Fantasy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Science &amp; Nature</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Sports</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Teen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Thriller</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >US</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="#"
+                                        >Women in Action</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center pe-lg-5">
+                        <div class="row-toggle-btn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="active-row-toggle size-6 border border-secondary p-1"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+                                />
+                            </svg>
+                        </div>
+                        <div class="row-toggle-btn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1"
+                                stroke="currentColor"
+                                class="size-6 border border-secondary p-1"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero -->
+        <header class="container-fluid position-relative">
+            <div class="row">
+                <div class="hero-image position-absolute top-0 end-0"></div>
+                <div class="hero-image-shadow position-absolute"></div>
+                <div class="col-6 hero ps-5">
+                    <div
+                        class="hero-body d-flex flex-column justify-content-evenly ps-5"
+                    >
+                        <img
+                            src="https://occ-0-6212-778.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABVLOPxleh2eUCpynD_Vv33N2klYKd_enerzrGqctlZR-PU7bxCylLqM-0zHfmnIXx7-hBuK-8H8vY96OSxCuMmUZOHErVwRc78C14yOocx7MC5C2I6InAuIDh6BznZZaxBJ0_VVvTHUpKrp_t9OHthxoi_LRPBrpCbI3FWMoilL1xv9D9mFN.webp?r=50f"
+                            alt="Dark TV Show Title"
+                            class="img-fluid"
+                        />
+                        <p class="text-white">
+                            Secrets unspool when a boy disappears from a small
+                            town in this cerebral series RogerEbert.com calls
+                            "one of the most mind-melting shows on television."
+                        </p>
+                        <div class="hero-buttons d-flex gap-3">
+                            <button
+                                class="btn play-btn rounded-1 d-flex align-items-center gap-2 fw-bold"
+                            >
+                                <ion-icon name="play"></ion-icon> Play
+                            </button>
+                            <button
+                                class="btn more-info-btn text-white rounded-1 d-flex align-items-center gap-2 fw-bold"
+                            >
+                                <ion-icon
+                                    name="information-circle-outline"
+                                ></ion-icon>
+                                More Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 position-relative">
+                    <div
+                        class="hero-maturity-rating d-flex align-items-center gap-3 text-white position-absolute end-0"
+                    >
+                        <ion-icon
+                            class="border rounded-circle p-3"
+                            name="refresh-outline"
+                        ></ion-icon>
+                        <p
+                            class="mb-0 bg-semi-transparent border-start border-3"
+                        >
+                            18+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="container-fluid p-5 mt-5 mt-md-0">
+            <!-- Trending -->
+            <section class="container-fluid p-5">
+                <div class="row">
+                    <div class="col pb-4">
+                        <h2 class="text-white fw-bolder">Trending Now</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="swiper trending-swiper overflow-visible">
+                            <div class="swiper-wrapper"></div>
+                            <div
+                                class="swiper-button-prev d-none d-lg-flex"
+                            ></div>
+                            <div
+                                class="swiper-button-next d-none d-lg-flex"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Watch Again -->
+            <section class="container-fluid hidden p-5">
+                <div class="row">
+                    <div class="col pb-4">
+                        <h2 class="text-white fw-bolder">Watch It Again</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="swiper watch-again-swiper overflow-visible">
+                            <div class="swiper-wrapper"></div>
+                            <div class="swiper-pagination"></div>
+                            <div
+                                class="swiper-button-prev position-absolute d-none d-lg-flex"
+                            ></div>
+                            <div
+                                class="swiper-button-next position-absolute d-none d-lg-flex"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- New Releases -->
+            <section class="container-fluid hidden p-5">
+                <div class="row">
+                    <div class="col pb-4">
+                        <h2 class="text-white fw-bolder">New Releases</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div
+                            class="swiper new-releases-swiper overflow-visible"
+                        >
+                            <div class="swiper-wrapper"></div>
+                            <div
+                                class="swiper-button-prev position-absolute d-none d-lg-flex"
+                            ></div>
+                            <div
+                                class="swiper-button-next position-absolute d-none d-lg-flex"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-6 m-auto py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="d-flex gap-5 py-2 footer-social-links">
+                                <a
+                                    class="text-white"
+                                    href="https://www.facebook.com/netflix/"
+                                    target="_blank"
+                                    ><ion-icon name="logo-facebook"></ion-icon
+                                ></a>
+                                <a
+                                    class="text-white"
+                                    href="https://www.instagram.com/Netflix"
+                                    target="_blank"
+                                    ><ion-icon name="logo-instagram"></ion-icon
+                                ></a>
+                                <a
+                                    class="text-white"
+                                    href="https://x.com/Netflix"
+                                    target="_blank"
+                                    ><ion-icon name="logo-twitter"></ion-icon
+                                ></a>
+                                <a
+                                    class="text-white"
+                                    href="https://www.youtube.com/@Netflix"
+                                    target="_blank"
+                                    ><ion-icon name="logo-youtube"></ion-icon
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="col-12 py-3">
+                            <ul class="list-unstyled footer-grid-list">
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Audio Description</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Help Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Gift Cards</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Media Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Investor Relations</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Jobs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Terms of Use</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Privacy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Legal Notices</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Cookie Preferences</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Corporate Information</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Contact Us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="text-white-50 text-decoration-none"
+                                        href="#"
+                                        >Ad Choices</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <button
+                                class="btn bg-transparent rounded-0 border-secondary text-white-50 footer-btn"
+                            >
+                                Service Code
+                            </button>
+                            <p class="text-white-50 mt-5 footer-copyright">
+                                &copy; 1997-2025 Netflix, Inc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./scripts/reusable-fuctions.js"></script>
+        <script src="./scripts/movies.js"></script>
+        <script src="./scripts/main.js"></script>
+        <script src="./scripts/my-list.js"></script>
+    </body>
+</html>
