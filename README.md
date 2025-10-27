@@ -1,3 +1,3 @@
 # Netflix Clone
 
-### Epicode exam
+### Epicode module exam
